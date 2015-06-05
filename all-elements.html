@@ -26,6 +26,66 @@
   body {
     @apply(--paper-font-body1);
   }
-
+  :root {
+    --primary-background-color: #333;
+    --accent-color: var(--red-accent-color);
+    --paper-fab-background: var(--red-accent-color);
+    --paper-tabs-selection-bar-color: var(--light-primary-color);
+    --paper-tab-ink: var(--light-primary-color);
+  }
+  body,
+  paper-header-panel {
+    background: var(--primary-background-color);
+  }
+  code {
+    font-family: 'Inconsolata', monospace;
+    color: #ddd;
+    font-size: 12pt;
+  }
+  #editpanel {
+    margin: 0 15px;
+  }
+  paper-tabs {
+    height: 32px;
+  }
+  paper-tab {
+    font-weight: 400;
+    max-width: 220px;
+  }
+  paper-progress {
+    top: inherit;
+    width: inherit;
+  }
+  paper-menu {
+    --paper-menu-color: #c6c6c6;
+  }
+  paper-fab {
+    z-index: 100;
+  }
+  #console {
+    font-family: 'Inconsolata', monospace;
+    font-size: 12pt;
+    line-height: 20px;
+    min-height: 50px;
+    overflow-y: auto;
+    margin: 8px;
+    padding: 8px;
+    background-color: var(--secondary-text-color);
+  }
+  #console .normal {
+    color: #fff;
+  }
+  #console .title {
+    opacity: 0.75;
+  }
+  #frame-container {
+    margin: 16px;
+    color: #ddd;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12pt;
+  }
+  #frame-container p {
+    color: #888;
+  }
 
 </style>
