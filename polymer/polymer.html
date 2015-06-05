@@ -2549,7 +2549,6 @@ if (!this._properties) {
 styleProperties.decorateStyles(this._styles);
 this._styles._scopeStyleProperties = null;
 this._properties = styleProperties.scopePropertiesFromStyles(this._styles);
-  styleProperties.reify(this._properties);
 }
 return this._properties;
 },
