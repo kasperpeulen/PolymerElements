@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="import" href="all.html">
+  </head>
+  <body>
+
+    <more-routing-config driver="path"></more-routing-config>
+    <more-route name="user" path="/users/:userId">
+      <more-route name="user-bio" path="/bio"></more-route>
+    </more-route>
+
+    <more-route-selector selectedParams="{{params}}">
+      <iron-pages>
+        <section route="/">
+          This is the index.
+        </section>
+
+        <section route="/about">
+          It's a routing demo!
+          <a href="{{ urlFor('user-bio', {userId: 1}) }}">Read about user 1</a>.
+        </section>
+
+        <section route="user">
+          <header>Heyo user {{params.userId}}!</header>
+          <template if="{{ route('user-bio').active }}">
+            All the details about {{params.userId}} that you didn't want to know...
+          </template>
+        </section>
+      </iron-pages>
+    </more-route-selector>
+  </body>
+</html>
